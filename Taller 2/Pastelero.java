@@ -26,7 +26,8 @@ public class Pastelero extends Thread {
     }
 
 	private void hacerPastel() {
-		System.out.println("Haciendo pastel");
+		System.out.println("Haciendo pastel: ");
+		pastel.consultarDetallesPedido();
 		try {
 			Thread.sleep(random.nextInt(10000) + 5000);
 		} catch (InterruptedException e) {

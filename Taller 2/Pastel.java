@@ -4,6 +4,10 @@ public class Pastel {
 	private String sabor;
 	private String color;
 	private boolean listo = false;
+	
+	public Pastel () {
+		
+	}
 
 	public synchronized void hacerPedido(int alto, int radio, String sabor, String color) {
 		this.alto = alto;
@@ -13,8 +17,11 @@ public class Pastel {
 		this.listo = true;
 	}
 
-	public synchronized String consultarDetallesPedido() {
-		return this.alto + " " + this.radio + " " + this.sabor +  " " + this.color;
+	public synchronized void consultarDetallesPedido() {
+		System.out.println("Alto: " + this.alto);
+		System.out.println("Radio: " + this.radio);
+		System.out.println("Sabor: " + this.sabor);
+		System.out.println("Color: " + this.color);
 	}
 
 	public synchronized boolean consultarEstadoPedido() {
